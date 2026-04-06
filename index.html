@@ -1,94 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | Software Engineering Undergraduate</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Header / Navigation -->
-<header>
-    <div class="container header-container">
-        <h1 class="logo">Your Name</h1>
-        <nav>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" id="nav-toggle">&#9776;</button>
-        </nav>
+  <!-- ========================= HEADER / NAV ========================= -->
+  <header>
+    <div class="container wrap">
+      <div class="brand">Your Name • UoK SE</div>
+      <button class="menu-btn" aria-label="Toggle menu">Menu</button>
+      <div class="nav" id="nav">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
-</header>
+  </header>
 
-<!-- Hero Section -->
-<section class="hero" id="home">
-    <div class="container hero-container">
-        <h2>Hello, I'm Your Name</h2>
-        <p>Software Engineering undergraduate building clean, user-friendly web applications.</p>
-        <a href="#contact" class="btn">Get in Touch</a>
-    </div>
-</section>
+  <!-- ========================= HERO / INTRO ========================= -->
+  <section id="hero" class="hero">
+    <div class="container hero-wrap fade">
+      <div>
+        <span class="tag">Software Engineering Undergraduate • University of Kelaniya</span>
+        <h1>Building reliable software with clean code and curiosity</h1>
+        <p>I'm a third-year student focused on web platforms, APIs, and scalable systems. I enjoy TypeScript, React, Node.js, and dabbling in DevOps.</p>
 
-<!-- About Section -->
-<section id="about" class="section-light">
-    <div class="container">
-        <h2>About Me</h2>
-        <p>A Software Engineering undergraduate with skills in programming, web development, and database management. Committed to delivering high-quality solutions and continuously learning new technologies.</p>
-    </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills">
-    <div class="container">
-        <h2>Technical Skills</h2>
-        <ul class="skills-list">
-            <li>Java</li>
-            <li>Python</li>
-            <li>HTML / CSS / JavaScript</li>
-            <li>MySQL</li>
-            <li>Git & GitHub</li>
-            <li>OOP Concepts</li>
-        </ul>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="section-light">
-    <div class="container">
-        <h2>Projects</h2>
-        <div class="projects-grid" id="projects-grid">
-            <!-- Projects rendered by JS -->
+        <div class="badges">
+          <span class="tag">TypeScript</span>
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Docker</span>
         </div>
-    </div>
-</section>
 
-<!-- Contact Section -->
-<section id="contact">
-    <div class="container">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-        <p id="form-message"></p>
-    </div>
-</section>
+        <div style="display:flex; gap:12px">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#contact" class="btn" style="background:var(--accent-2); color:#06142e">Contact Me</a>
+        </div>
+      </div>
 
-<!-- Footer -->
-<footer class="section-light">
-    <div class="container">
-        <p>&copy; 2026 Your Name. All Rights Reserved.</p>
+      <img class="profile" src="https://via.placeholder.com/480x360.png?text=Your+Photo" alt="Profile photo" width="480" height="360"/>
     </div>
-</footer>
+  </section>
 
-<!-- Link to JS -->
-<script src="js/script.js"></script>
+  <!-- ========================= ABOUT ========================= -->
+  <section id="about">
+    <div class="container fade">
+      <h2>About Me</h2>
+      <p class="lead">Passionate about crafting maintainable systems and learning through projects and communities at University of Kelaniya.</p>
+      <div class="card">
+        <p>I’ve built small SaaS prototypes, contributed to open-source docs, and led a team capstone on campus. Currently exploring cloud-native patterns and CI/CD.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= SKILLS ========================= -->
+  <section id="skills">
+    <div class="container fade">
+      <h2>Skills</h2>
+      <div class="grid skills">
+        <div class="card">
+          <strong>Frontend</strong>
+          <p class="lead">React, Next.js, Vite, Tailwind CSS</p>
+        </div>
+        <div class="card">
+          <strong>Backend</strong>
+          <p class="lead">Node.js, Express, PostgreSQL, Prisma</p>
+        </div>
+        <div class="card">
+          <strong>DevOps</strong>
+          <p class="lead">Docker, GitHub Actions, Nginx</p>
+        </div>
+        <div class="card">
+          <strong>Testing</strong>
+          <p class="lead">Jest, Playwright</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= PROJECTS ========================= -->
+  <section id="projects">
+    <div class="container fade">
+      <h2>Projects</h2>
+      <div class="grid projects">
+        <article class="card project">
+          <h3>CampusHub</h3>
+          <p class="lead">A student events platform built with Next.js and PostgreSQL.</p>
+          <div class="badges">
+            <span class="tag">Next.js</span>
+            <span class="tag">Postgres</span>
+          </div>
+          <a class="btn" href="#" target="_blank" rel="noreferrer">GitHub</a>
+        </article>
+
+        <article class="card project">
+          <h3>Kelani-API</h3>
+          <p class="lead">REST API for course management with role-based access.</p>
+          <div class="badges">
+            <span class="tag">Express</span>
+            <span class="tag">JWT</span>
+          </div>
+          <a class="btn" href="#" target="_blank" rel="noreferrer">GitHub</a>
+        </article>
+
+        <article class="card project">
+          <h3>AlgoViz</h3>
+          <p class="lead">Visualizations for classic algorithms used in tutoring.</p>
+          <div class="badges">
+            <span class="tag">TypeScript</span>
+            <span class="tag">D3</span>
+          </div>
+          <a class="btn" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= EDUCATION ========================= -->
+  <section id="education">
+    <div class="container fade">
+      <h2>Education</h2>
+      <div class="card edu">
+        <div class="item">
+          <div>
+            <strong>BSc (Hons) in Software Engineering</strong><br/>
+            University of Kelaniya, Sri Lanka
+          </div>
+          <div class="tag">2023 — Present</div>
+        </div>
+        <p class="lead">Relevant modules: Data Structures & Algorithms, DBMS, Web Engineering, Distributed Systems.</p>
+        <p class="lead">Activities: IEEE Student Branch, Hackathons, Open-source meetups.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= CONTACT ========================= -->
+  <section id="contact">
+    <div class="container fade">
+      <h2>Contact</h2>
+      <p class="lead">Email: you@stu.kln.ac.lk • LinkedIn: /in/yourhandle • GitHub: /yourhandle</p>
+      <form action="#" method="post" onsubmit="event.preventDefault(); alert('Thanks! I will get back to you.');">
+        <input aria-label="Name" type="text" placeholder="Your Name" required />
+        <input aria-label="Email" type="email" placeholder="Your Email" required />
+        <textarea aria-label="Message" rows="5" placeholder="Your Message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Your Name — Built with ❤️ in Sri Lanka</div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+
 </body>
 </html>
