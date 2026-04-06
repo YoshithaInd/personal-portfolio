@@ -3,39 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Yoshitha Indeewari</title>
+  <title>Yoshitha Indeewari | Software Engineer</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+  <div class="custom-cursor"></div>
+
   <header class="navbar">
-    <div class="logo">Yoshitha.dev</div>
-    <button class="menu-toggle js-menu-toggle">☰</button>
+    <div class="logo">Yoshitha<span>.dev</span></div>
+    <button class="menu-toggle js-menu-toggle"><i class="fas fa-bars"></i></button>
     <nav class="nav-menu js-nav-menu">
       <a href="#hero" class="js-smooth-scroll">Home</a>
+      <a href="#about" class="js-smooth-scroll">About</a>
       <a href="#projects" class="js-smooth-scroll">Projects</a>
       <a href="#contact" class="js-smooth-scroll">Contact</a>
     </nav>
   </header>
 
-  <section id="hero" class="hero-section">
-    <h1>Software Engineering Student</h1>
-    <p>Developing solutions with C, Java, and Web Technologies.</p>
-  </header>
-
-  <section id="projects" class="projects-section">
-    <h2>My Projects</h2>
-    <div class="projects-grid js-projects-grid">
+  <section id="hero" class="hero-section reveal">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Yoshitha</span></h1>
+      <p class="typewriter">Software Engineering Undergraduate</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn primary js-smooth-scroll">View Work</a>
+        <a href="https://github.com/YoshithaInd" target="_blank" class="btn secondary"><i class="fab fa-github"></i> GitHub</a>
       </div>
+    </div>
   </section>
 
-  <section id="contact" class="contact-section">
-    <h2>Contact Me</h2>
-    <form class="js-contact-form">
-      <input type="email" class="js-email-input" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-      <p class="form-message js-form-message"></p>
-    </form>
+  <section id="about" class="about-section reveal">
+    <h2>About Me</h2>
+    <p class="bio">Motivated Software Engineering undergraduate with an interest in software development and technology-driven solutions. Focused on learning, teamwork, and developing practical solutions to real-world problems.</p>
+    <div class="skills-container">
+      <div class="skill-tag">Java</div>
+      <div class="skill-tag">Python</div>
+      <div class="skill-tag">JavaScript</div>
+      <div class="skill-tag">SQL</div>
+      <div class="skill-tag">OOP</div>
+      <div class="skill-tag">Git</div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section reveal">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid js-projects-grid"></div>
+  </section>
+
+  <section id="contact" class="contact-section reveal">
+    <h2>Get In Touch</h2>
+    <div class="contact-container">
+      <form class="js-contact-form">
+        <input type="email" class="js-email-input" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn primary">Send Message</button>
+        <p class="form-message js-form-message"></p>
+      </form>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/yoshitha-indeewari-30132238b" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/YoshithaInd" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
   </section>
 
   <script src="js/script.js" type="module"></script>
