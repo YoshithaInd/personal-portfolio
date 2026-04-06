@@ -246,7 +246,7 @@ h2 {
   margin: 6px 0;
 }
 
-.edu {
+/* .edu {
   display: grid;
   gap: 14px;
 }
@@ -256,6 +256,25 @@ h2 {
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
+} */
+
+/* Education Tiles with Logos */
+.edu .item {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* spacing between logo, text, and tag */
+  margin-bottom: 12px;
+}
+
+.edu .item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.edu .item .tag {
+  margin-left: auto; /* pushes the year to the right */
 }
 
 form {
