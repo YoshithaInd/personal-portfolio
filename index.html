@@ -1,70 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoshitha | Software Engineer</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoshitha Indeewari | SE Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="cursor"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
 
-    <header class="navbar glass">
-        <div class="container flex-row">
-            <div class="logo">YI<span>.</span></div>
-            <nav class="nav-links js-nav">
-                <a href="#hero">Home</a>
-                <a href="#projects">Work</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <div class="menu-btn js-menu-toggle"><i class="fas fa-bars"></i></div>
+  <header class="navbar">
+    <div class="container flex-row">
+      <div class="logo">Yoshitha<span>.dev</span></div>
+      <button class="menu-toggle js-menu-toggle"><i class="fas fa-bars"></i></button>
+      <nav class="nav-links js-nav-links">
+        <a href="#home" class="js-nav-item">Home</a>
+        <a href="#about" class="js-nav-item">About</a>
+        <a href="#projects" class="js-nav-item">Work</a>
+        <a href="#contact" class="js-nav-item">Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero v-center fade-in">
+      <div class="container grid-2">
+        <div class="hero-content">
+          <h1>Hi, I'm <span class="accent">Yoshitha.</span></h1>
+          <p>Software Engineering Undergraduate @ Kelaniya</p>
+          <div class="hero-btns">
+            <a href="#projects" class="btn primary js-nav-item">Explore My Work</a>
+            <a href="https://github.com/YoshithaInd" target="_blank" class="btn secondary"><i class="fab fa-github"></i> GitHub</a>
+          </div>
         </div>
-    </header>
+        <div class="hero-imgreveal">
+          <div class="img-frame">
+            <img src="assets/profile.png" alt="Yoshitha Portrait">
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <main>
-        <section id="hero" class="hero-section v-center">
-            <div class="container grid-2">
-                <div class="hero-text reveal">
-                    <h1>Building <span class="gradient-text">Scalable</span> Software.</h1>
-                    <p>Software Engineering Undergraduate at University of Kelaniya. Focused on OOP, Java systems, and data-driven solutions.</p>
-                    <div class="cta-btns">
-                        <a href="#projects" class="btn-primary">View Projects</a>
-                        <a href="https://github.com/YoshithaInd" target="_blank" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-                <div class="hero-img reveal">
-                    <div class="img-frame">
-                        <img src="assets/profile.jpeg" alt="Yoshitha Portrait">
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section id="about" class="about-section reveal">
+      <div class="container grid-split">
+        <div class="about-text">
+          <h2 class="label">01. About Me</h2>
+          <p>Motivated SE student focusing on Java systems, C data structures, and efficient backend solutions. Dedicated to teamwork and problem-solving.</p>
+        </div>
+        <div class="skills-wrap">
+          <span class="skill-tag">Java</span> <span class="skill-tag">Python</span>
+          <span class="skill-tag">C</span> <span class="skill-tag">SQL</span>
+          <span class="skill-tag">OOP</span> <span class="skill-tag">Git</span>
+        </div>
+      </div>
+    </section>
 
-        <section id="projects" class="project-section">
-            <div class="container">
-                <h2 class="section-label reveal">Selected Works</h2>
-                <div class="project-grid js-project-grid">
-                    </div>
-            </div>
-        </section>
+    <section id="projects" class="projects-section reveal">
+      <div class="container">
+        <h2 class="label">02. Selected Work</h2>
+        <div class="project-grid js-projects-grid">
+          </div>
+      </div>
+    </section>
 
-        <section id="contact" class="contact-section reveal">
-            <div class="container contact-wrapper">
-                <div class="contact-info">
-                    <h2>Let's Connect.</h2>
-                    <p>Open for internships and collaborative projects.</p>
-                </div>
-                <form class="contact-form js-form">
-                    <input type="email" placeholder="Your Email" class="js-email" required>
-                    <textarea placeholder="Tell me about your project" required></textarea>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                    <p class="form-feedback js-feedback"></p>
-                </form>
-            </div>
-        </section>
-    </main>
+    <section id="contact" class="contact-section reveal">
+      <div class="container contact-container">
+        <h2>Let's Collaborate.</h2>
+        <form class="contact-form js-form">
+          <input type="email" class="js-email" placeholder="Email Address" required>
+          <textarea placeholder="Tell me about your project" required></textarea>
+          <button type="submit" class="btn primary">Send Message</button>
+          <p class="js-msg feedback"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-    <script src="js/script.js" type="module"></script>
+  <script src="js/script.js" type="module"></script>
 </body>
 </html>
