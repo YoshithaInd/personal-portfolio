@@ -59,3 +59,11 @@ const skillObserver = new IntersectionObserver(entries => {
 skillBars.forEach(bar => {
   skillObserver.observe(bar);
 });
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 300) {
+    document.body.classList.add("scrolled");
+  } else {
+    document.body.classList.remove("scrolled");
+  }
+});

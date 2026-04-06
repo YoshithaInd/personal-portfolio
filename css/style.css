@@ -32,17 +32,21 @@ body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--text);
-  
-  /* Background image */
-  background: 
-    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-    url("../images/bg.jpg");
-    
+
+  background-image: url("../images/bg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   transition: background 0.5s ease;
 }
+
+body.scrolled {
+  background: #f5f1e8; /* beige */
+}
+
+
+
+
 
 img {
   max-width: 100%;
@@ -204,7 +208,11 @@ nav .wrap {
 ========================= */
 
 #hero {
-  padding: 100px 0;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 140px 0;
+  color: white;
 }
 
 .hero-wrap {
