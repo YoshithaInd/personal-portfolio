@@ -1,67 +1,172 @@
-// 1. Data Model (Your Actual Projects)
-const engineeringProjects = [
-  { name: "C- DSA Engine", tech: "C Programming", info: "Efficient data structure implementations for academia." },
-  { name: "Java Inventory System", tech: "Java / OOP", info: "Management application for warehouse logistics." },
-  { name: "SQL DB Schema", tech: "MySQL / Database", info: "Relational database design for a university platform." }
-];
+/*==================== MENU SHOW Y HIDDEN ====================*/
+const navMenu = document.getElementById("nav-menu"),
+  navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close");
 
-// 2. Dynamic Rendering
-const grid = document.querySelector('.js-projects-grid');
-grid.innerHTML = engineeringProjects.map(p => `
-  <article class="cardreveal">
-    <small style="color: #2563eb; font-weight: 700;">${p.tech}</small>
-    <h3 style="margin: 15px 0; font-size: 1.5rem;">${p.name}</h3>
-    <p style="color: #64748b; font-size: 0.95rem;">${p.info}</p>
-    <a href="#" style="display: inline-block; margin-top: 20px; text-decoration: none; color: black; font-weight: 600;">View Code →</a>
-  </div>
-`).join('');
+/*===== MENU SHOW =====*/
+/* Validate if constant exists */
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-menu");
+  });
+}
 
-// 3. Lively Mouse Interaction (Simple Animation)
-const cursor = document.querySelector('.cursor');
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = `${e.clientX}px`;
-  cursor.style.top = `${e.clientY}px`;
+/*===== MENU HIDDEN =====*/
+/* Validate if constant exists */
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
+
+/*==================== REMOVE MENU MOBILE ====================*/
+const navLink = document.querySelectorAll(".nav__link");
+
+function linkAction() {
+  const navMenu = document.getElementById("nav-menu");
+  // When we click on each nav__link, we remove the show-menu class
+  navMenu.classList.remove("show-menu");
+}
+navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+/*==================== ACCORDION SKILLS ====================*/
+const skillsContent = document.getElementsByClassName("skills__content"),
+  skillsHeader = document.querySelectorAll(".skills__header");
+
+function toggleSkills() {
+  let itemClass = this.parentNode.className;
+
+  for (let i = 0; i < skillsContent.length; i++) {
+    skillsContent[i].className = "skills__content skills__close";
+  }
+  if (itemClass === "skills__content skills__close") {
+    this.parentNode.className = "skills__content skills__open";
+  }
+}
+
+skillsHeader.forEach((el) => {
+  el.addEventListener("click", toggleSkills);
 });
 
-// 4. Navigation Menu Toggle
-const menuBtn = document.querySelector('.js-menu-toggle');
-const navLinks = document.querySelector('.js-nav-links');
+/*==================== QUALIFICATION TABS ====================*/
+const tabs = document.querySelectorAll('[data-target]'),
+      tabContents = document.querySelectorAll('[data-content]')
 
-menuBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  menuBtn.innerHTML = navLinks.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.target)
+
+        tabContents.forEach(tabContent => {
+            tabContent.classList.remove('qualification__active')
+        })
+        target.classList.add('qualification__active')
+
+        tabs.forEach(t => {
+            t.classList.remove('qualification__active')
+        })
+        tab.classList.add('qualification__active')
+    })
+})
+
+/*==================== SERVICES MODAL ====================*/
+const modalViews = document.querySelectorAll(".services__modal"),
+  modalBtns = document.querySelectorAll(".services__button"),
+  modalCloses = document.querySelectorAll(".services__modal-close");
+
+let modal = function (modalClick) {
+  modalViews[modalClick].classList.add("active-modal");
+};
+
+modalBtns.forEach((modalBtn, i) => {
+  modalBtn.addEventListener("click", () => {
+    modal(i);
+  });
 });
 
-// 5. Intersection Observer (Scroll Animation)
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
+modalCloses.forEach((modalClose) => {
+  modalClose.addEventListener("click", () => {
+    modalViews.forEach((modalView) => {
+      modalView.classList.remove("active-modal");
+    });
+  });
+});
+
+/*==================== PORTFOLIO SWIPER  ====================*/
+// Ensure the Swiper library is linked in your HTML before this script
+let swiperPortfolio = new Swiper(".portfolio__container", {
+  cssMode: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll("section[id]");
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    const sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
     }
   });
-}, { threshold: 0.15 });
+}
+window.addEventListener("scroll", scrollActive);
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+/*==================== CHANGE BACKGROUND HEADER ====================*/
+function scrollHeader() {
+  const nav = document.getElementById("header");
+  // When the scroll is greater than 80 viewport height, add the scroll-header class
+  if (this.scrollY >= 80) nav.classList.add("scroll-header");
+  else nav.classList.remove("scroll-header");
+}
+window.addEventListener("scroll", scrollHeader);
 
-// 6. Smooth Scrolling & Form Validation
-document.querySelectorAll('.js-nav-item').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-    if(navLinks.classList.contains('active')) menuBtn.click(); // Close mobile menu
-  });
-});
+/*==================== SHOW SCROLL UP ====================*/
+function scrollUp() {
+  const scrollUp = document.getElementById("scroll-up");
+  // When the scroll is higher than 560 viewport height, add the show-scroll class
+  if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
+  else scrollUp.classList.remove("show-scroll");
+}
+window.addEventListener("scroll", scrollUp);
 
-const form = document.querySelector('.js-form');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const feedback = document.querySelector('.js-msg');
-  if (document.querySelector('.js-email-input').value.includes('@')) {
-    feedback.innerText = "Thanks! I'll get back to you soon.";
-    feedback.style.color = "green";
-    form.reset();
-  } else {
-    feedback.innerText = "Please enter a valid email address.";
-    feedback.style.color = "red";
-  }
+/*==================== DARK LIGHT THEME ====================*/
+const themeButton = document.getElementById("theme-button");
+const darkTheme = "dark-theme";
+const iconTheme = "uil-sun";
+
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
+
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? "dark" : "light";
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
+
+if (selectedTheme) {
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](darkTheme);
+  themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](iconTheme);
+}
+
+themeButton.addEventListener("click", () => {
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+  localStorage.setItem("selected-theme", getCurrentTheme());
+  localStorage.setItem("selected-icon", getCurrentIcon());
 });

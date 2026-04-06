@@ -1,88 +1,250 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yoshitha | SE Undergraduate Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-  <div class="cursor"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoshitha Indeewari | Portfolio</title>
+    <link rel="stylesheet" href="assets/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" /> 
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  </head>
 
-  <header class="navbar">
-    <div class="container flex-header">
-      <div class="logo">YI<span>.</span></div>
-      <button class="menu-toggle js-menu-toggle"><i class="fas fa-bars"></i></button>
-      <nav class="nav-links js-nav-links">
-        <a href="#home" class="js-nav-item">Home</a>
-        <a href="#about" class="js-nav-item">About</a>
-        <a href="#projects" class="js-nav-item">Work</a>
-        <a href="#contact" class="js-nav-item">Connect</a>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Yoshitha</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="uil uil-estate nav__icon"></i>Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">
+                <i class="uil uil-user nav__icon"></i>About
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class="uil uil-file-alt nav__icon"></i>Skills
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#portfolio" class="nav__link">
+                <i class="uil uil-scenery nav__icon"></i>Projects
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class="uil uil-message nav__icon"></i>Contact-Me
+              </a>
+            </li>
+          </ul>
+          <i class="uil uil-times nav__close" id="nav-close"></i>
+        </div>
+        <div class="nav__btns">
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
+          </div>
+        </div>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section id="home" class="hero v-center fade-in">
-      <div class="container grid-hero">
-        <div class="hero-content">
-          <h1>Hi, I'm <span class="accent">Yoshitha.</span></h1>
-          <p>Software Engineering Undergraduate @ Kelaniya</p>
-          <div class="cta-group">
-            <a href="#projects" class="btn primary js-nav-item">Explore Work</a>
-            <a href="https://github.com/YoshithaInd" target="_blank" class="btn secondary"><i class="fab fa-github"></i> GitHub</a>
+    <main class="main">
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__content grid">
+            <div class="home__social">
+              <a href="https://www.linkedin.com/in/yoshitha-indeewari-30132238b" target="_blank" class="home__social-icon">
+                <i class="uil uil-linkedin-alt home__icon"></i>
+              </a>
+              <a href="https://github.com/YoshithaInd" target="_blank" class="home__social-icon">
+                <i class="uil uil-github-alt home__icon"></i>
+              </a>
+            </div>
+            <div class="home__img">
+              <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0" mask-type="alpha">
+                  <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                </mask>
+                <g mask="url(#mask0)">
+                  <image class="home__blob-img" x="-10" y="-10" xlink:href="assets/profile.png" />
+                </g>
+              </svg>
+            </div>
+            <div class="home__data">
+              <h1 class="home__title">Hi, I'm Yoshitha Indeewari</h1>
+              <h3 class="home__subtitle">Software Engineering Student</h3>
+              <p class="home__description">
+                A motivated undergraduate at the <strong>University of Kelaniya</strong>, passionate about software development and practical technology solutions.
+              </p>
+              <a href="#contact" class="button button--flex">
+                Contact me<i class="uil uil-message button__icon"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="hero-img-wrap">
-          <img src="assets/profile.jpeg" alt="Yoshitha Portrait" class="profile-img">
+      </section>
+
+      <section class="about section" id="about">
+        <h2 class="section__title">About Me</h2>
+        <span class="section__subtitle">My introduction</span>
+        <div class="about__container container grid">
+          <img src="assets/profile.png" alt="" class="about__img" />
+          <div class="about__data">
+            <p class="about__description">
+              I am a Software Engineering undergraduate with a focus on learning, teamwork, and developing practical solutions to real-world problems. I have a can-do attitude and thrive in challenging environments.
+            </p>
+            <div class="about__info">
+              <div>
+                <span class="about__info-title">03+</span>
+                <span class="about__info-name">Programming <br />Languages</span>
+              </div>
+              <div>
+                <span class="about__info-title">04+</span>
+                <span class="about__info-name">Tech <br />Projects</span>
+              </div>
+            </div>
+            <div class="about__buttons">
+              <a download="" href="assets/MyCV.pdf" class="button button--flex">
+                Download CV<i class="uil uil-download-alt button__icon"></i>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="about" class="reveal">
-      <div class="container">
-        <h2 class="section-title">01. About Me</h2>
-        <div class="grid-split">
-          <div class="bio-text">
-            <p>I focus on bridge building between complex problems and technology. Fueled by a deep interest in OOP, Data Structures in C, Java Inventory Systems, and Python automation. Team-focused and dedicated to learning.</p>
+      <section class="skills section" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <span class="section__subtitle">My technical level</span>
+        <div class="skills__container container grid">
+          <div class="skills__content skills__open">
+            <div class="skills__header">
+              <i class="uil uil-brackets-curly skills__icon"></i>
+              <h1 class="skills__title">Languages</h1>
+              <i class="uil uil-angle-down skills__arrow"></i>
+            </div>
+            <div class="skills__list grid">
+              <div class="skills__data"><h3 class="skills__name">Java</h3></div>
+              <div class="skills__data"><h3 class="skills__name">Python</h3></div>
+              <div class="skills__data"><h3 class="skills__name">JavaScript</h3></div>
+              <div class="skills__data"><h3 class="skills__name">C</h3></div>
+            </div>
           </div>
-          <div class="skills-box">
-            <div class="skill-tag">Java</div> <div class="skill-tag">Python</div>
-            <div class="skill-tag">SQL</div> <div class="skill-tag">Git</div>
-            <div class="skill-tag">C</div> <div class="skill-tag">JavaScript</div>
+          <div class="skills__content skills__close">
+            <div class="skills__header">
+              <i class="uil uil-database skills__icon"></i>
+              <h1 class="skills__title">Technologies</h1>
+              <i class="uil uil-angle-down skills__arrow"></i>
+            </div>
+            <div class="skills__list grid">
+              <div class="skills__data"><h3 class="skills__name">SQL / MySQL</h3></div>
+              <div class="skills__data"><h3 class="skills__name">Git & GitHub</h3></div>
+              <div class="skills__data"><h3 class="skills__name">HTML & CSS</h3></div>
+              <div class="skills__data"><h3 class="skills__name">OOP Concepts</h3></div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="projects" class="reveal">
-      <div class="container">
-        <h2 class="section-title">02. Selected Work</h2>
-        <div class="project-grid js-projects-grid">
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section__title">Projects</h2>
+        <span class="section__subtitle">Most recent work</span>
+        <div class="portfolio__container container swiper-container">
+          <div class="swiper-wrapper">
+            <div class="portfolio__content grid swiper-slide">
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">Java Inventory System</h3>
+                <p class="portfolio__description">
+                  A full-scale inventory management application utilizing Object-Oriented Programming principles to track stock and sales.
+                </p>
+                <a href="https://github.com/YoshithaInd" class="button button--flex button--small">GitHub<i class="uil uil-external-link-alt button__icon"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__content grid swiper-slide">
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">Data Structures in C</h3>
+                <p class="portfolio__description">
+                  Implementation of Stacks, Queues, and Linked Lists for high-speed data processing and academic lab work.
+                </p>
+                <a href="https://github.com/YoshithaInd" class="button button--flex button--small">GitHub<i class="uil uil-external-link-alt button__icon"></i></a>
+              </div>
+            </div>
           </div>
-      </div>
-    </section>
+          <div class="swiper-button-next"><i class="uil uil-angle-right-b"></i></div>
+          <div class="swiper-button-prev"><i class="uil uil-angle-left-b"></i></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
 
-    <section id="contact" class="reveal">
-      <div class="container">
-        <h2 class="section-title">03. Get In Touch</h2>
-        <div class="contact-card">
-          <form class="contact-form js-form">
-            <input type="email" class="js-email-input" placeholder="Your Email Address" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn primary">Send Message</button>
-            <p class="js-msg feedback"></p>
+      <section class="contact section" id="contact">
+        <h2 class="section__title">Contact Me</h2>
+        <span class="section__subtitle">Get in touch</span>
+        <div class="contact__container container grid">
+          <div>
+            <div class="contact__information">
+              <i class="uil uil-envelope contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Email</h3>
+                <span class="contact__subtitle">yoshitha@example.com</span>
+              </div>
+            </div>
+            <div class="contact__information">
+              <i class="uil uil-map-marker contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Location</h3>
+                <span class="contact__subtitle">Kelaniya, Sri Lanka</span>
+              </div>
+            </div>
+          </div>
+
+          <form action="" class="contact__form grid">
+            <div class="contact__inputs grid">
+              <div class="contact__content">
+                <label class="content__label">Name</label>
+                <input type="text" class="contact__input" />
+              </div>
+              <div class="contact__content">
+                <label class="content__label">Email</label>
+                <input type="email" class="contact__input" />
+              </div>
+            </div>
+            <div class="contact__content">
+              <label class="content__label">Message</label>
+              <textarea name="" cols="0" rows="7" class="contact__input"></textarea>
+            </div>
+            <div>
+              <a href="#" class="button button--flex">Send Message<i class="uil uil-message button__icon"></i></a>
+            </div>
           </form>
-          <div class="social-links">
-             <a href="www.linkedin.com/in/yoshitha-indeewari-30132238b" target="_blank"><i class="fab fa-linkedin"></i></a>
-             <a href="https://github.com/YoshithaInd" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__bg">
+        <div class="footer__container container grid">
+          <div>
+            <h1 class="footer__title">Yoshitha</h1>
+            <span class="footer__subtitle">Software Engineering Student</span>
+          </div>
+          <ul class="footer__links">
+            <li><a href="#about" class="footer__link">About</a></li>
+            <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+            <li><a href="#contact" class="footer__link">Contact</a></li>
+          </ul>
+          <div class="footer__socials">
+            <a href="https://github.com/YoshithaInd" target="_blank" class="footer__social"><i class="uil uil-github-alt"></i></a>
           </div>
         </div>
+        <p class="footer__copy">&#169; Yoshitha Indeewari. All rights reserved</p>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <script src="js/script.js" type="module"></script>
-</body>
+    <script src="assets/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
