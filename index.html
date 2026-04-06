@@ -3,75 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yoshitha | Software Engineer Portfolio</title>
+  <title>Yoshitha | SE Undergraduate Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
+  <div class="cursor"></div>
 
   <header class="navbar">
     <div class="container flex-header">
       <div class="logo">YI<span>.</span></div>
-      <button class="menu-toggle js-menu-toggle" aria-label="Toggle Menu">
-        <i class="fas fa-bars"></i>
-      </button>
+      <button class="menu-toggle js-menu-toggle"><i class="fas fa-bars"></i></button>
       <nav class="nav-links js-nav-links">
         <a href="#home" class="js-nav-item">Home</a>
         <a href="#about" class="js-nav-item">About</a>
         <a href="#projects" class="js-nav-item">Work</a>
-        <a href="#contact" class="js-nav-item">Contact</a>
+        <a href="#contact" class="js-nav-item">Connect</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section id="home" class="hero v-center fade-in">
-      <div class="container">
-        <h1 class="hero-text">Developing <span class="accent">Impactful</span> Software.</h1>
-        <p class="hero-sub">Software Engineering Student @ University of Kelaniya</p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn primary js-nav-item">Explore Work</a>
-          <a href="https://github.com/YoshithaInd" target="_blank" class="btn secondary"><i class="fab fa-github"></i> GitHub</a>
+      <div class="container grid-hero">
+        <div class="hero-content">
+          <h1>Hi, I'm <span class="accent">Yoshitha.</span></h1>
+          <p>Software Engineering Undergraduate @ Kelaniya</p>
+          <div class="cta-group">
+            <a href="#projects" class="btn primary js-nav-item">Explore Work</a>
+            <a href="https://github.com/YoshithaInd" target="_blank" class="btn secondary"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="hero-img-wrap">
+          <img src="assets/profile.jpeg" alt="Yoshitha Portrait" class="profile-img">
         </div>
       </div>
     </section>
 
     <section id="about" class="reveal">
-      <div class="container grid-split">
-        <div class="about-info">
-          <h2 class="label">01. About Me</h2>
-          <p>Motivated Software Engineering undergraduate focused on building practical, technology-driven solutions. I specialize in Java, Python, and SQL database management.</p>
-        </div>
-        <div class="skills-wrap">
-          <span class="tag">Java</span> <span class="tag">Python</span> 
-          <span class="tag">SQL</span> <span class="tag">OOP</span>
-          <span class="tag">Git</span> <span class="tag">JavaScript</span>
+      <div class="container">
+        <h2 class="section-title">01. About Me</h2>
+        <div class="grid-split">
+          <div class="bio-text">
+            <p>I focus on bridge building between complex problems and technology. Fueled by a deep interest in OOP, Data Structures in C, Java Inventory Systems, and Python automation. Team-focused and dedicated to learning.</p>
+          </div>
+          <div class="skills-box">
+            <div class="skill-tag">Java</div> <div class="skill-tag">Python</div>
+            <div class="skill-tag">SQL</div> <div class="skill-tag">Git</div>
+            <div class="skill-tag">C</div> <div class="skill-tag">JavaScript</div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="projects" class="reveal">
       <div class="container">
-        <h2 class="label">02. Selected Work</h2>
-        <div class="project-grid js-project-grid">
+        <h2 class="section-title">02. Selected Work</h2>
+        <div class="project-grid js-projects-grid">
           </div>
       </div>
     </section>
 
     <section id="contact" class="reveal">
-      <div class="container contact-flex">
-        <div class="contact-text">
-          <h2 class="label">03. Connect</h2>
-          <h3>Let's start a project.</h3>
+      <div class="container">
+        <h2 class="section-title">03. Get In Touch</h2>
+        <div class="contact-card">
+          <form class="contact-form js-form">
+            <input type="email" class="js-email-input" placeholder="Your Email Address" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn primary">Send Message</button>
+            <p class="js-msg feedback"></p>
+          </form>
+          <div class="social-links">
+             <a href="www.linkedin.com/in/yoshitha-indeewari-30132238b" target="_blank"><i class="fab fa-linkedin"></i></a>
+             <a href="https://github.com/YoshithaInd" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
         </div>
-        <form class="contact-form js-form">
-          <input type="email" class="js-email" placeholder="Email Address" required>
-          <textarea placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn-submit">Send Message</button>
-          <p class="js-msg feedback"></p>
-        </form>
       </div>
     </section>
   </main>
