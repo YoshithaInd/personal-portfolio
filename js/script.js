@@ -1,4 +1,4 @@
-// Mobile menu
+// Mobile Menu
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.getElementById('nav');
 
@@ -6,8 +6,8 @@ menuBtn.addEventListener('click', () => {
   nav.classList.toggle('open');
 });
 
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
+// Scroll Animation
+const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
       e.target.classList.add('show');
@@ -20,12 +20,10 @@ document.querySelectorAll('.fade').forEach(el => observer.observe(el));
 // Year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Skill bars animation
+// Skill Animation
 const skillBars = document.querySelectorAll('.progress-bar');
 
-skillBars.forEach(bar => {
-  bar.style.width = "0";
-});
+skillBars.forEach(bar => bar.style.width = "0");
 
 const skillObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
