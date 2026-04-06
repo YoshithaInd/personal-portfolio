@@ -1,74 +1,94 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Portfolio</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-      <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+<!-- Header / Navigation -->
+<header>
+    <div class="container header-container">
+        <h1 class="logo">Your Name</h1>
+        <nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+        </nav>
+    </div>
+</header>
 
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container hero-container">
+        <h2>Hello, I'm Your Name</h2>
+        <p>Software Engineering undergraduate building clean, user-friendly web applications.</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+</section>
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
+<!-- About Section -->
+<section id="about" class="section-light">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>A Software Engineering undergraduate with skills in programming, web development, and database management. Committed to delivering high-quality solutions and continuously learning new technologies.</p>
+    </div>
+</section>
 
-      <title>Responsive portfolio website - Bedimcode</title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-         
-      </header>
+<!-- Skills Section -->
+<section id="skills">
+    <div class="container">
+        <h2>Technical Skills</h2>
+        <ul class="skills-list">
+            <li>Java</li>
+            <li>Python</li>
+            <li>HTML / CSS / JavaScript</li>
+            <li>MySQL</li>
+            <li>Git & GitHub</li>
+            <li>OOP Concepts</li>
+        </ul>
+    </div>
+</section>
 
-      <!--==================== MAIN ====================-->
-      <main class="main">
-         <!--==================== HOME ====================-->
-         <section class="home section" id="home">
-            
-         </section>
+<!-- Projects Section -->
+<section id="projects" class="section-light">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid" id="projects-grid">
+            <!-- Projects rendered by JS -->
+        </div>
+    </div>
+</section>
 
-         <!--==================== ABOUT ====================-->
-         <section class="about section" id="about">
-            
-         </section>
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p id="form-message"></p>
+    </div>
+</section>
 
-         <!--==================== SKILLS ====================-->
-         <section class="skills section">
-            
-         </section>
+<!-- Footer -->
+<footer class="section-light">
+    <div class="container">
+        <p>&copy; 2026 Your Name. All Rights Reserved.</p>
+    </div>
+</footer>
 
-         <!--==================== SERVICES ====================-->
-         <section class="services section" id="services">
-            
-         </section>
-
-         <!--==================== PROJECTS ====================-->
-         <section class="projects section" id="projects">
-            
-         </section>
-
-         <!--==================== CONTACT ====================-->
-         <section class="contact section" id="contact">
-            
-         </section>
-      </main>
-
-      <!--==================== FOOTER ====================-->
-      <footer class="footer">
-         
-      </footer>
-
-      <!--========== SCROLL UP ==========-->
-      
-
-      <!--=============== SCROLLREVEAL ===============-->
-      <script src=""></script>
-
-      <!--=============== EMAIL JS ===============-->
-      
-
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
+<!-- Link to JS -->
+<script src="js/script.js"></script>
+</body>
 </html>
