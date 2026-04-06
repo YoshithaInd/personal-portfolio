@@ -21,11 +21,27 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+/* body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--text);
   background: linear-gradient(180deg, #0b1220 0%, #0e1530 100%) fixed;
+} */
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  
+  /* Background image */
+  background: 
+    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+    url("../images/bg.jpg");
+    
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background 0.5s ease;
 }
 
 img {
@@ -242,6 +258,7 @@ h2 {
 .lead {
   color: var(--muted);
   margin: 0 0 22px;
+  line-height: 1.8;   /* adds spacing between lines */
 }
 
 /* Skills Section */
