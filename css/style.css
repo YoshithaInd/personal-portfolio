@@ -131,3 +131,20 @@ nav .wrap {
   opacity: 1;
   transform: translateY(0);
 }
+
+.contact-icons {
+  margin-top: 15px;
+}
+
+.contact-icons a {
+  font-size: 28px;
+  margin-right: 20px;
+  color: #374151;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-icons a:hover {
+  color: #4f46e5;
+  transform: scale(1.2);
+}
