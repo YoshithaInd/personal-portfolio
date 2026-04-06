@@ -41,3 +41,21 @@ document.querySelectorAll('.fade').forEach(el => observer.observe(el));
 // CURRENT YEAR
 // =========================
 document.getElementById('year').textContent = new Date().getFullYear();
+
+
+// =========================
+// SKILL BAR ANIMATION
+// =========================
+const skillBars = document.querySelectorAll('.progress-bar');
+
+const skillObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.width = entry.target.style.width;
+    }
+  });
+}, { threshold: 0.5 });
+
+skillBars.forEach(bar => {
+  skillObserver.observe(bar);
+});
