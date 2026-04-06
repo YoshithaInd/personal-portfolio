@@ -121,6 +121,8 @@ nav .wrap {
 .brand {
   font-weight: 700;
   letter-spacing: 0.3px;
+  padding-left: 16px;   /* add this line */
+  padding-right: 16px;  /* optional */
 }
 
 .nav {
