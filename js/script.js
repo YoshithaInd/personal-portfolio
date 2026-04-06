@@ -1,38 +1,67 @@
-// 1. Project Data
+// 1. Data Model (Dynamic Content)
 const projects = [
-  { title: "Java OOP System", desc: "University lab project on encapsulation.", link: "https://github.com/YoshithaInd" },
-  { title: "Database Design", desc: "MySQL relational schema for e-commerce.", link: "https://github.com/YoshithaInd" },
-  { title: "Web Portfolio", desc: "Interactive portfolio using JS and CSS.", link: "https://github.com/YoshithaInd" }
+  { name: "Java Inventory Pro", tech: "Java / OOP", info: "Management system for warehouse logistics." },
+  { name: "C-Lang Data Engine", tech: "C / DSA", info: "Implementing Stacks and Queues for high-speed data processing." },
+  { name: "SQL Retail DB", tech: "SQL / MySQL", info: "Complex relational schema for E-Commerce platforms." }
 ];
 
-// 2. Render Projects
-const grid = document.querySelector('.js-projects-grid');
+// 2. Render View (DOM Manipulation)
+const grid = document.querySelector('.js-project-grid');
 grid.innerHTML = projects.map(p => `
-  <div class="project-card">
-    <i class="fas fa-code-branch" style="font-size: 2rem; color: #3498db;"></i>
-    <h3>${p.title}</h3>
-    <p>${p.desc}</p>
-    <a href="${p.link}" target="_blank" class="btn secondary">Code</a>
-  </div>
+  <article class="card">
+    <small style="color: #2563eb; font-weight: bold;">${p.tech}</small>
+    <h3 style="margin: 15px 0;">${p.name}</h3>
+    <p style="color: #64748b; font-size: 0.9rem;">${p.info}</p>
+  </article>
 `).join('');
 
-// 3. Custom Cursor Logic
-const cursor = document.querySelector('.custom-cursor');
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
+// 3. Custom Cursor Controller (Simple Animation)
+const dot = document.querySelector('.cursor-dot');
+const outline = document.querySelector('.cursor-outline');
+
+window.addEventListener('mousemove', (e) => {
+  dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  outline.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 });
 
-// 4. Reveal on Scroll (Intersection Observer)
+// 4. Navigation Toggle
+const menuBtn = document.querySelector('.js-menu-toggle');
+const navLinks = document.querySelector('.js-nav-links');
+
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('mobile-active');
+  menuBtn.innerHTML = navLinks.classList.contains('mobile-active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+});
+
+// 5. Intersection Observer (Scroll Reveal)
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('active');
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.15 });
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(section => observer.observe(section));
 
-// 5. Navigation & Form Logic
-// (Keep your existing Menu Toggle and Form Validation code here)
+// 6. Smooth Scroll & Form Validation
+document.querySelectorAll('.js-nav-item').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+const form = document.querySelector('.js-form');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const email = document.querySelector('.js-email').value;
+  const msg = document.querySelector('.js-msg');
+  
+  if (email.includes('@')) {
+    msg.innerText = "Message sent! I'll be in touch.";
+    msg.style.color = "green";
+    form.reset();
+  } else {
+    msg.innerText = "Please provide a valid email.";
+    msg.style.color = "red";
+  }
+});
