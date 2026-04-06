@@ -1,170 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio</title>
-
-  <link rel="stylesheet" href="css/style.css"/>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoshitha | Software Engineer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
+    <div class="cursor"></div>
 
-<!-- HEADER -->
-<header>
-  <nav>
-    <div class="wrap">
-      <div class="brand">Yoshitha Indeewari</div>
-      <button class="menu-btn">Menu</button>
-      <div class="nav" id="nav">
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
-</header>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="container">
-    <h1>Welcome!</h1>
-    <p class="lead">
-      Passionate about web development, software quality assurance, and UI/UX design.
-    </p>
-
-    <p class="contact-links">
-      <a href="mailto:yosithaind19@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/yoshitha-indeewari-30132238b" target="_blank">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/YoshithaInd" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-    </p>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="container fade">
-    <h2>About Me</h2>
-    <p class="lead">
-      Software Engineering undergraduate with strong interest in web development,
-      UI/UX design, and software quality assurance. Passionate about building
-      clean, responsive, and user-friendly applications.
-    </p>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="container fade">
-    <h2>Skills</h2>
-
-    <div class="skills-bars">
-      <div class="skill">
-        <p>Java</p>
-        <div class="progress">
-          <div class="progress-bar" data-width="80%"></div>
+    <header class="navbar glass">
+        <div class="container flex-row">
+            <div class="logo">YI<span>.</span></div>
+            <nav class="nav-links js-nav">
+                <a href="#hero">Home</a>
+                <a href="#projects">Work</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="menu-btn js-menu-toggle"><i class="fas fa-bars"></i></div>
         </div>
-      </div>
+    </header>
 
-      <div class="skill">
-        <p>Python</p>
-        <div class="progress">
-          <div class="progress-bar" data-width="75%"></div>
-        </div>
-      </div>
+    <main>
+        <section id="hero" class="hero-section v-center">
+            <div class="container grid-2">
+                <div class="hero-text reveal">
+                    <h1>Building <span class="gradient-text">Scalable</span> Software.</h1>
+                    <p>Software Engineering Undergraduate at University of Kelaniya. Focused on OOP, Java systems, and data-driven solutions.</p>
+                    <div class="cta-btns">
+                        <a href="#projects" class="btn-primary">View Projects</a>
+                        <a href="https://github.com/YoshithaInd" target="_blank" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="hero-img reveal">
+                    <div class="img-frame">
+                        <img src="assets/profile.jpeg" alt="Yoshitha Portrait">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="skill">
-        <p>JavaScript</p>
-        <div class="progress">
-          <div class="progress-bar" data-width="70%"></div>
-        </div>
-      </div>
+        <section id="projects" class="project-section">
+            <div class="container">
+                <h2 class="section-label reveal">Selected Works</h2>
+                <div class="project-grid js-project-grid">
+                    </div>
+            </div>
+        </section>
 
-      <div class="skill">
-        <p>HTML & CSS</p>
-        <div class="progress">
-          <div class="progress-bar" data-width="85%"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <section id="contact" class="contact-section reveal">
+            <div class="container contact-wrapper">
+                <div class="contact-info">
+                    <h2>Let's Connect.</h2>
+                    <p>Open for internships and collaborative projects.</p>
+                </div>
+                <form class="contact-form js-form">
+                    <input type="email" placeholder="Your Email" class="js-email" required>
+                    <textarea placeholder="Tell me about your project" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                    <p class="form-feedback js-feedback"></p>
+                </form>
+            </div>
+        </section>
+    </main>
 
-<!-- EDUCATION -->
-<section id="education">
-  <div class="container fade">
-    <h2>Education</h2>
-
-    <div class="card edu">
-
-      <div class="item">
-        <img src="images/uok.png" alt="UOK"/>
-        <div>
-          <strong>BSc (Hons) Software Engineering</strong><br/>
-          University of Kelaniya
-        </div>
-        <div class="tag">2023 — Present</div>
-      </div>
-      <p class="lead">Relevant modules: DSA, DBMS, OOP, Web Development</p>
-      </div>
-      <div class="card edu">
-      <div class="item">
-        <img src="images/ucsc.jpg" alt="UCSC"/>
-        <div>
-          <strong>Advanced Multimedia Web Design</strong><br/>
-          University of Colombo School of Computing
-        </div>
-        <div class="tag">2024</div>
-      </div>
-      <p class="lead">Learned Web Design and Development</p>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-  <div class="container fade">
-    <h2>Contact</h2>
-    <p class="lead">You can reach me through these platforms.</p>
-
-    <div class="contact-icons">
-      <!-- Email -->
-      <a href="mailto:yosithaind19@gmail.com" target="_blank">
-        <i class="fas fa-envelope"></i>
-      </a>
-
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/yoshitha-indeewari-30132238b" target="_blank">
-        <i class="fab fa-linkedin"></i>
-      </a>
-
-      <!-- GitHub -->
-      <a href="https://github.com/YoshithaInd" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© <span id="year"></span> Your Name</p>
-</footer>
-
-<script src="js/script.js"></script>
+    <script src="js/script.js" type="module"></script>
 </body>
 </html>
